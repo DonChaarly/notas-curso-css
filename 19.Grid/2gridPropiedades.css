@@ -1,0 +1,76 @@
+body{
+    background: radial-gradient(circle, #fff, #bbb) ;
+    padding: 15px;
+}
+
+/*--------------------- PROPIEDADES DE LOS GRID  ----------------------------*/
+
+/*
+    AL GRID CONTAINER
+        grid-template-rows: Se especifican las filas que tendra el grid
+        grid-template-columns: Se especifican las columnas que tenda el grid
+        grid-template: Es el shorcut
+        row-gap: Se especifica la separacion entre filas del grid
+        column-gap: Se especifica la separacion entre columnas del grid
+        gap: Se especifica La separacon entre celdas del grid (es como un shorcut de la dos anteriores)
+
+    Al GRID ITEM
+        grid-(row/column)-start: Se especifica la grid-line en la que va a empezar el elemento
+        grid-(row/column)-end: Se especifica la grid-line en la que va a terminar el elemento
+        grid-(row/column): Es el shorcut de las propiedades anteriores
+
+*/
+
+/*
+    Formas de especificar tamano y cantidad de flias y/o columnas
+        grid-template-(rows/columns): 
+                                    150(px, em, rem, etc) 100px 150px; Se colocan los valores de cada fila, 
+                                        asi se tendran en este ejemplo 3 flias con esas dimensiones
+                                    Con funcion repeat([numero de columnas/filas], [dimension 1] [dimension2]...[dimension n]) 
+                                        hacer que se repita n-veces unos valores para especificar columns/filas
+    Separacion entre elementos
+        row-gap: Se puede especificar la separacion entre fila y fila
+        column-gap: Se puede especificar la separacion entre columna y columna
+        gap: Esta propiedad es como un margin, se puede especificar la separacion entre celda y celda
+    
+                     
+*/
+/*
+    Unidades
+        1fr: Con esta unidad la columna o fila se comportara como un flex-box ya que se ajustara al tamano de la pantalla
+        Unidades normales: px, em, rem, etc
+*/
+.grid-container{
+    display: grid;
+    grid-template-columns: 150px 100px 1fr 1fr;
+    grid-template-rows: repeat(2, 150px) 100px;
+    gap: 3px;
+    row-gap: 5px;
+    column-gap: 10px;
+
+    background-color: antiquewhite;
+    border: 3px solid black;
+}
+
+.grid-item{
+    background-color: aquamarine;
+    border: 1px solid black
+}
+
+/*
+    Con grid-(row/column)-(start/end) y grid-(row/column)
+        Se puede especificar tanto la grid-line o el grid-track(fila o columna)
+        Si se coloca solamente el numero se esta haciendo referencia a la grid-line
+        Si se coloca span (numero) se esta especificando el numero de grid-tracks(fila o columna) que va a ocupar el elemento
+*/
+.grid-item:first-child{
+    background: rgb(29, 108, 150);
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column: 1 / 3;
+}
+.grid-item:nth-child(2){
+    background: rgb(83, 181, 27);
+    grid-column: 3 / span 2;
+
+}

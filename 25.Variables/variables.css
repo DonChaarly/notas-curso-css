@@ -1,0 +1,83 @@
+/*---------------------------   VARIABLES   ------------------------*/
+
+/*
+    Las variables son espacios que se reservan en memoria
+    Se pueden declarar variables a las cuales les asociamos un valor fijo, ya sea un color, un tamano, un valor, etc.
+    Esto nos sirve para hacer mas modular nuestra aplicacin al modificar los valorse desde las variables
+
+    Se tiene dos tipos de variables, locales y globales
+    Los locales se crean dentro de la definicion del estilo, ya sea en una clase, id, elemento, etc
+        y solo sirven para la clase, id, elemento, etc donde fueron creadas
+    Los globales se crean en el apartadodo root y estan disponibles en todo el documento
+
+    Las variables pueden redefinirse y tomaran el ultimo valor que se les fue asignado
+*/
+
+/*
+    VARIABLES GLOBALES
+    
+    Las variables globales se crean dentro de root
+    Para declarar una vairable se colocan dos guiones -- seguido del nombre y el valor
+*/
+:root{
+    --color-rojo: rgb(190, 84, 27);
+    --color-rojo: rgb(232, 46, 5); /*Se tomara este valor porque fue el ultimo definido*/
+    --borde-azul: 2px solid blue;
+}
+
+
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 300vh;
+    align-content: flex-start;
+    
+    
+}
+
+/*
+    Para seleccionar una variable se utiliza la funcion var() 
+    y se coloca el valor de la variable a utilizar
+*/
+.container div{
+    padding: 20px 5px;
+    width: 150px;
+    height: 150px;
+    margin: 40px;
+    border: var(--borde-azul);
+}
+
+.caja1{
+    background-color: var(--color-rojo);
+
+}
+.caja2{
+    background-color: var(--color-rojo);
+    
+}
+.caja3{
+    background-color: var(--color-rojo);
+}
+.caja4{
+    background-color: var(--color-rojo);
+}
+.caja5{
+    background-color: var(--color-rojo);
+}
+.caja6{
+    background-color: var(--color-rojo);
+}
+
+
+/*
+    Las variables locales solo funcinan en las clases, id, elementos, atributos, etc donde han sido creadas
+    y sus variantes
+*/
+b{
+    --color-azul: #38f;
+    background-color: var(--color-azul);
+}
+b:hover{
+    color: var(--color-azul);
+}

@@ -1,0 +1,26 @@
+/*--------------------------    FLEX    -----------------------------------*/
+
+
+/*
+    Con display flex podemos posicionar de mejor manera los items que estan dentro de un contenedor
+    Flex requiere de un contenedor Flex e items Flex
+    El contenedor se comportara como un bloque normal
+    Los Flex items seran todos aquellos que sean hijos directos del contenedor flex
+
+    Se diferencia en parte a inline-block porque los elementos flex se ajustan dependiendo la altura
+    Aunque alguno tenga mas contenido, este se ajusta a la altura del otro, ocupando menos espacio
+
+    En el contenedor tendremos dos ejes: El main-axis y el cross-axis
+    El main-axis: Inicialmente es el eje x iniciando de la izquierda a la derecha
+    El cross-axis: Inicialmente es el eje y iniciando de arriba hacia abajo
+    */
+
+.flex-container{
+    display: flex;
+}
+
+.flex-item{
+    padding: 30px;
+    margin: 30px;
+    background-color: #3ba;
+}

@@ -1,0 +1,31 @@
+/*---------------- PROPIEDADES DE LAS CADENAS-----------------------*/
+
+/*
+    font-size: el tamano de la letra
+    font-family: la fuente que tendra la letra
+    line-height: El espacio que ocupa la letra a lo largo
+    font_weight: Pasado ciertos valores se puede volver mas delgada o mas ancha como en negritas
+    text-align: Alinea el texto a lo horizontal en el espacio que puede ocupar
+    text-shadow: Nos permite dar sombra a las palabras 
+                especificando el (movimiento de la sombera en eje x)  (en el ejey) (tamano del desenfoque) (color)
+                colocando una coma se puede duplicar los valres y esto hara que el efecto sea mas intenso
+
+*/
+h2 {
+    font-size: 5em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.9;
+    font-weight: 900;
+}
+
+
+/*importar fuentes
+    para importar una fuente nos podemos ir a google fonts 
+    copiar el link pegarlo en el archivo html
+    y seleccionar alguna d estas fuentes
+
+    si no se encuentra laprimera tipografia seleccionada se va con la otra  
+*/
+h2{
+    font-family: 'Pacifico', cursive;
+}

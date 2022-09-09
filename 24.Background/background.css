@@ -1,0 +1,98 @@
+body{
+    padding: 20px;
+    background: radial-gradient(circle, #fff, #bbb);
+}
+/*--------------------------------  BACKGROUND  -----------------------------*/
+
+
+/*
+    Background se utiliza para cambiar el aspecto del fondo de un elemento
+    Las propiedades que se tiene relacionadas a esto son:
+        background-color: Cambia el color de fondo
+        background-image: Coloca una foto como fondo
+        background-image: url(); Con la funcion url se le puede especificar la url de una imagen
+        background-size: tamano, (tamano en x) (tamano en y), cover, containt
+                        Se cambia el tamano del background
+        background-repeat: Se especifica el numero de veces que queremos que la imagen pueda repetirse en el fondo
+        background-position: (left, top, bottom, right, center) (left, top, bottom, right, center)
+                            Elegimos la posicion que queremos que tome
+        background-attachment: scrool, fixed, inherit;
+                              Podemos especificar que el fondo quede fijo o que baje junto con el scroll
+        background-clip: border-box, padding-box, content-box
+                        Especificamos desde donde se empezara a ver el background, desde el borde, desde el padding, desde el contenido
+                        clip recorta la imagen desde ese punto
+        background-origin: border-box, padding-box, content-box
+                        Especificamos desde donde se empezara a ver el background, desde el borde, desde el padding, desde el contenido
+                        clip crea la imagen desde ese punto
+*/  
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 300vh;
+    align-content: flex-start;
+    
+    
+}
+
+.caja{
+    padding: 20px 5px;
+    width: 150px;
+    height: 150px;
+    margin: 40px;
+    border: 2px red solid;
+    
+
+}
+
+/*Balcgroud-size*/
+.caja:nth-child(1){
+    background-image: url(https://www.elsoldemexico.com.mx/incoming/vgekij-perrito.jpg/ALTERNATES/LANDSCAPE_1140/perrito.jpg);
+
+    background-size: 100% 100%;
+}
+/*Balcgroud-repeat*/
+.caja:nth-child(2){
+    background-color: aqua;
+    background-image: url(https://www.elsoldemexico.com.mx/incoming/vgekij-perrito.jpg/ALTERNATES/LANDSCAPE_1140/perrito.jpg);
+    background-size: contain;
+
+    background-repeat: no-repeat ;
+}
+/*Balcgroud-clip*/
+.caja:nth-child(3){
+    background-color: aqua;
+    background-image: url(https://www.elsoldemexico.com.mx/incoming/vgekij-perrito.jpg/ALTERNATES/LANDSCAPE_1140/perrito.jpg);
+    background-size: cover;
+    background-repeat: no-repeat ;
+
+    background-clip: content-box ;
+}
+/*Balcgroud-origin*/
+.caja:nth-child(4){
+    background-color: aqua;
+    background-image: url(https://www.elsoldemexico.com.mx/incoming/vgekij-perrito.jpg/ALTERNATES/LANDSCAPE_1140/perrito.jpg);
+    background-size: cover;
+    background-repeat: no-repeat ;
+
+    background-origin: content-box ;
+}
+/*Balcgroud-position*/
+.caja:nth-child(5){
+    background-color: aqua;
+    background-image: url(https://www.elsoldemexico.com.mx/incoming/vgekij-perrito.jpg/ALTERNATES/LANDSCAPE_1140/perrito.jpg);
+    background-size: cover;
+    background-repeat: no-repeat ;
+    background-size: 40px;
+
+    background-position: left bottom;
+}
+/*Balcgroud-attachment*/
+.caja:nth-child(6){
+    background-color: aqua;
+    background-image: url(https://www.elsoldemexico.com.mx/incoming/vgekij-perrito.jpg/ALTERNATES/LANDSCAPE_1140/perrito.jpg);
+    background-size: 300px;
+
+
+    background-attachment: fixed;
+}
+

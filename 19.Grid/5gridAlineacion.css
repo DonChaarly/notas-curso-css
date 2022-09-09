@@ -1,0 +1,73 @@
+body{
+    background: radial-gradient(circle, #fff, #bbb) ;
+    padding: 15px;
+}
+
+/*--------------------- ALINEACION EN UN GRID  ----------------------------*/
+
+/*
+    Alinear filas y columnas en el contenedor
+        justify-content (para columnas): Se tienen los valores
+                                            center, start, end, space-around, space-between, space-evenly
+        align-content (para filas): Se tienen los valores
+                                            center, start, end, space-around, space-between, space-evenly
+    Alinear items dentro de sus celdas (horizontalmente y verticalmente)
+        justify-item (horizontalmente): Se tienen los valores
+                                            center, start, end 
+        align-item (verticalmente): Se tienen los valores
+                                            center, start, end
+
+*/
+
+.grid-container{
+    display: grid;
+    background-color: antiquewhite;
+    border: 3px solid black;
+    height: 95vh;
+    grid-template-columns: repeat(3, minmax(100px, 200px));
+    grid-template-rows: repeat(3, minmax(100px, 200px));
+
+    justify-content: space-evenly;
+    align-content: center;
+
+    justify-items: center;
+    align-items: end;
+
+}
+.grid-item{
+    background-color: aquamarine;
+    border: 1px solid black;
+    width: 50%;
+    height: 50%;
+}
+
+
+/*
+    Alinear los propios elementos (horizontalmente y verticalmente)
+        align-self (verticalmente): Se tienen los valores
+                                            center, start, end
+        justify-self (horizontalmente): Se tienen los valores
+                                            center, start, end 
+        place-self: (valorAlign) (valorJustify); Es el shorcut para las dos propiedades anteriores
+*/
+
+.grid-item:nth-child(1){
+    place-self: start start;
+}
+
+.grid-item:nth-child(5){
+    justify-self: end;
+}
+
+.grid-item:nth-child(6){
+    justify-self: start;
+}
+
+/*
+    Order:
+    Se especifica la posicion que tendra la caja en el flujo (es como un z-indez, si un elemento tiene mas order que otro, se ira hacia el final del flujo)
+                Aui el item 2 tiene order de 3 y los demas de 0 por defecto entonces el item 2 se ira al final
+*/
+.grid-item:nth-child(2){
+    order: 3;
+}

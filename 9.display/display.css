@@ -1,0 +1,25 @@
+/*------------------   DISPLAY-----------------------------*/
+
+/*
+    Con la propiedad display modificamos el comportamiento de las cajas
+    block: Con esta propiedad se comportaran como un bloque
+            Se pueden modificar las medidas de la caja
+    inline: Se comporta como en linea ajustandose a las medidas del contenido 
+            pero no se puede modificar el ancho o el atlo de la caja
+    inline-block: Se comporta como un en linea ajustandose a las medidas del contenido
+            pero se puede modificar las medidas de la caja
+    Table: esta ya casi no se utiliza, tampoco sus derivados
+    Grid: Se ve mas adelante
+    Flex: Se ve mas adelante
+    none: Con display none hacemos que el elemento desaparezca del dom
+*/
+
+div {
+    display: inline-block;
+
+    width: 150px;
+    height: 150px;
+    border: 12px solid red;
+    background-color: yellow;
+    margin: 20px;
+}

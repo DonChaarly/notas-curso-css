@@ -1,0 +1,20 @@
+/*--------------------  METODOLOGIA BEM ----------------------------------*/
+
+
+/*Al elemento contenedor se le coloca el nombre que se quiera separando palabras con un guion*/
+.contact-form{
+    background-color: aqua;
+}
+
+/*Al elemento contenido se le coloa el mismo nombre de la clase contenedora __ y el nombre extra*/
+.contact-form__input{
+    height: 60px;
+    width: 300px;
+}
+
+/*Colocando dos guines -- Se puede crear una clase que sea igual a las demas pero el que tenga este atributo sera un poco especial*/
+.contact-form__input--activo{
+    height: 60px;
+    width: 300px;
+    background-color: blanchedalmond;
+}

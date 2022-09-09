@@ -1,0 +1,19 @@
+/*------------------------ICONOS FONT AWESOME------------------*/
+
+/*
+    Para agregar iconos a nuestra pagina podemos hacer uso de font awesome para esto hay que crear una cuenta en 
+    font awesome
+    agregamos este escript en el head o hasta abajo del codigo html
+    <script src="https://kit.fontawesome.com/e5be4c2623.js" crossorigin="anonymous"></script>
+*/
+
+div{
+    margin: 30px;
+}
+
+.iconos > i{
+    margin: 50px;
+    font-size: 30px;
+    color: red;
+
+}

@@ -1,0 +1,35 @@
+body{
+    background: radial-gradient(circle, #fff, #bbb) ;
+    padding: 15px;
+}
+
+/*--------------------- GRID DINAMICO  ----------------------------*/
+
+/*
+    Para hacer dinamico el grid podemos agregar ciertos valores al momento de definir las filas o columnas del grid
+    Con:
+        min-content: El tamaño de la celda se adaptara a su contenido, si se tiene texto el tamano sera el de la palabra mas larga
+        max-content: El tamano de la celda se adaptara a su contenido, si se tiene texto el tamanos sera el de la frase completa
+        minmax([valorMinimo], [valosMaximo]): Se agrega un rango en el que se puede estirar o achicar la celda
+        auto-fill: Va creando columnas/filas sirmpre y cuando haya espacio para colocar algun elemento con su min-width
+        auto-fit: Va escalando las columnas/filas hasta que pueda caber otro elemento
+*/
+
+.grid-container{
+    display: grid;
+    background-color: antiquewhite;
+    border: 3px solid black;
+    height: 95vh;
+
+
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(3, minmax(min-content, 200px));
+
+}
+
+
+
+.grid-item{
+    background-color: aquamarine;
+    border: 1px solid black
+}

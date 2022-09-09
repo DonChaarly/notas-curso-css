@@ -1,0 +1,111 @@
+/*------------------------- TEORIA DE CAJAS---------------------------*/
+
+/*..........Tipos de cajas
+    En bloques: Son las mas importanes
+                Ocupan todo el ancho disponible
+                Devido a que ocupan todo el ancho no permiten tener otro elemento al lado
+                Se les puede cambiar el ancho y alto
+                algunos elementos en bloque son: h2, form, p, div, etc
+    En linea: Ocupan el ancho que requiere su contenido
+              Pueden tener algun otro elemento al lado suyo
+              No se puede modificar su ancho o alto
+              algunos elementos en linea son: b, span*/
+
+/*..........Cambiar el comportamiento de las cajas
+    El atributo display nos permite modificar el comportamiento de las cajas
+    En vez de que algo se comporte como block podemos colocar inline y vicebersa*/
+h2 {
+    display: inline;
+}
+
+p {
+    background-color: blueviolet;
+    height: 50px;
+    width: 300px;
+}
+
+
+/*..........Box Model*/
+/*
+    El box model es la representacion de las cajas en html, (busca un dibujo de esto si no lo entiendes pelotudo)
+    Las cajas tiene capas que empiezan por el content, sigue el padding, border y margin
+
+        content: Es el contenido que tendra la caja
+        padding: Es la distancia que separa al borde del contenido de la caja
+        border: Esto como su nombre lo indica es un borde que recubre la caja
+        margin: Es la distancia de separacion que tendra la caja de las otras cajas
+*/
+
+
+/*...........Propiedades de cajas*/
+/*
+    background-color: Cambiamos el color de fondo
+    background: linear-gradient(to (top, bottom, right, left), (color), (color); Aplicamos un gradiente al fondo
+    display: Cambiamos el comportamiento de la caja (inline, block, inli-block, flex, grid, etc)
+    padding-(top, right, bottom, left): Se cambia el padding en la direccion que se le indica
+    padding: 
+            Especificando 4 valores: Los valores corresponderan a top, right, bottom, left en este orden
+            Especificando el primer valor solamente: Se modifica tanto el top como el bottom con el valor que se coloque
+            Especificando el primer y segundo valor solaemnte: El primer valor correspondera al top y bottom y el segundo al right y left
+            Especificando tres valores: El primer valor sera el top, el segundo el right y left y el tercero el bottom
+    height: Especificamos el tamano a lo largo de la caja
+    width: Especificamos el tamano a lo ancho de la caja
+    box-sizing:
+            Con content-box: height y width se aplicara a partir del contenido
+            Con border-box: height y width se aplicara a partir del borde  
+    margin: Igual que con el padding podemos colocar mas de un valor y espacificamos la separacion que tendremso con respecto a los demas elementos
+            Con margin auto  centra la caja dentro del espacio en el que este contenida, esto solo funciona con bloques que no estan posicionados
+    border-width: Se especifica el ancho del borde
+    border-style: Se especifica el estilo del borde el mas utilizado es el solid
+    border-color: Se especifica el color del borde
+    border: Es un shorcut para estblecer el ancho estilo y color del borde en ese orden
+    border-radius: Especificamos el radio o redondeo que tendra el borde en las esquinas tambien se puede manejar %
+    border-collapse: Se utiliza para estblecer el borde en tablas
+    outline: Esta propiedad es como un borde que va encima del borde real, sin embargo este borde no ocupa espacio real
+             tampoco deforma las dimensiones de la caja como lo puede hacer el border
+             teoricamente si se tuviera un elemnto al lado de este el outline se encimaria en este otro componente
+    box-shadow: Nos permite dar sombra a la caja 
+                especificando el (movimiento de la sombera en eje x)  (en el ejey) (tamano del desenfoque) (cuanto borde se tendra) (color)
+                Si se coloca un coma , y se duplican los valores el efecto se intensifica
+    text-shadow: Nos permite dar sombra a las palabras
+    transform: rotate(grados)  : Con esta funcion podemos rotar la caja
+    opacity: Se puede cambiar la opacidad de la caja, por defecto se tiene en 1, con 0 seria completamente transparente
+*/
+
+h3{
+    background-color: #a33;
+    display: inline-block;
+
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 80px;
+    padding: 30px 20px 10px 80 px;
+    padding: 65px 10px;
+
+    width: 200px;
+    height: 150px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    margin: 30px;
+
+    border-width: 5px;
+    border-style: solid;
+    border-color: violet;
+    border: 5px solid violet;
+    outline: 50px solid blue;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px 0 #000;
+    text-shadow: 2px 5px 10px #000, 2px 5px 10px #000, 2px 5px 10px #000;
+    transform: rotate(45deg);
+    opacity: .6;
+
+    
+
+
+}
+
+

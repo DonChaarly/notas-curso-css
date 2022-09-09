@@ -1,0 +1,35 @@
+/*------------------------  FLOAT  -----------------------------------*/
+
+/*
+    La propiedad float se utiliza para hacer que los elementos se recarguen hacia un costado
+    left: Recargamos el elemento hacia la izquierda
+    right: Recargamos el elemento hacia la derecha
+    None: 
+    Inherit:
+
+*/
+
+/*
+    Esto ya casi no se utiliza, una funcion buena que queda es que
+    cuando se tiene texto se puede botar hacia un lado una imagen haciendo que el texto la recubra
+*/
+
+img{
+    width: 300px;
+    float: right;
+    padding: 0 0 30px 30px;
+}
+
+
+.content{
+    width: 60vw;
+    margin: 40px auto;
+    background-color: gray;
+    padding: 30px;
+
+}
+
+p {
+    font-size: 30px;
+    text-align: justify;
+}

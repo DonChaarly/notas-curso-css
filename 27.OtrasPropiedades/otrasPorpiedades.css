@@ -1,0 +1,75 @@
+.container{
+    padding: 20px;
+
+    
+}
+
+.container div{
+    background-color: aquamarine;
+    padding: 30px;
+    margin: 10px;
+}
+
+img{
+    width: 100px;
+    float: right;
+}
+
+/*--------------------  OTRAS PROPIEDADES   -------------------------------*/
+
+
+/*
+    ..................Directon
+    Con direction se puede modificar la direccion en horizontal del elemento
+    Si se coloca por ejemplo rtl el objeto se vera como si lo pusieramos en un espejo
+
+    direction: ltr, rtl, initial, inherit;
+                ltr: Left to Right ( la direccion ira de izquierda a derecha)
+                rtl: Right to Left
+                initial: La inicial
+                inherit: heredada
+
+    ................Letter Spacing
+    Para modificar el espacio entre letra y letra
+
+    letter-spacing: px, em, rem, etc
+
+    ...............scroll-behavior
+    Modificar el comportamiento del scroll cuando por ejemplo se hace un link a un elemnto y la pagina se va hacia ese elemento
+    Se le tiene que dar a todos los elementos osea a *
+    scroll-behavior: smoot
+                    Con smoot hace un recorrido mas suabe
+
+    ...............user-selected
+    Se utiliza para indicar si se puede seleccionar algo de la pagina o no
+    user-selected:  
+                  all: cuando damos click se selecciona tod el contenido
+
+
+
+
+*/
+
+.direction{
+    direction: rtl;
+}
+
+.spacing {
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    letter-spacing: 70px;
+}
+
+*{
+    scroll-behavior: smooth;
+}
+
+.selected-all{
+    user-select: all;
+}
+.selected-none{
+    user-select: none;
+}
+.selected-text{
+    user-select: text;
+}

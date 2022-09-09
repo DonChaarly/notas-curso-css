@@ -1,0 +1,82 @@
+/* -----------------------      SELECTORES     ------------------------------- */
+
+/*.............ESTRUCTURA /*
+
+/*Selector puede ser: nombreDeClase, elementoHTML(h1,p,b), identificador(#id), etc
+  propiedad: ej. color, background, etc
+  valor: 10px, #fff, flex, etc*/
+
+  /*selector{
+    propiedad: valor;
+  }*/
+
+/*.............TIPOS DE SELECTORES /*
+/*
+Universal: *
+De tipo: h1, p, etc
+Clase: .clase
+id: #id
+Por atributo: 
+Descendiente:
+Pseudo-clases
+
+mas selectores: https://www.w3schools.com/cssref/css_selectors.asp
+*/
+
+/*.....Universal
+  Se aplica a todos los elementos de la pagina*/
+* {
+  background-color: bisque;
+}
+
+/*.............De tipo 
+  Se aplica a un elementos especifico del html o a varios colocando coma ","*/
+button, h2 {
+  color: red;
+}
+
+/*.............Clase 
+  Se agrega el atributo class en el elemento html
+  Se crea una clase colocando .nombre__de-la-clase
+*/
+.parrafo {
+  font-size: 30px;
+}
+
+/*.............IDENTIFICADOR
+  Se agrega el atirbuto id en el elemento html
+  Se crea un identificador o id colocando #nombredelIdentificador*/
+#parrafo-largo{
+  background-color: aqua;
+}
+
+/*.............Por atirbuto
+  Se crea un atributo en el elemento html ej. atributo="vaqueva"
+  Se coloca entre corchetes este atributo  */
+[atributo="vaqueva"] {
+  color: blueviolet;
+}
+
+/*.............Descendiente
+  Sirve para modificar los elementos que estan dentro de algun otro elemento o clase o identificador
+  Se coloca el primer elemento que esta envolviendo y el elemento hijo que queremos modificar */
+div p{
+  background-color: chocolate;
+}
+
+/*.............Pseudo-clases 
+  Sirve para modificar un elemento cuando se aplique una pseudo-clase como hover
+  Se coloca el elemento, clase o identificador : y la pseudo-clase*/
+p:hover{
+  color: blue;
+}
+
+
+/*.............ESTRUCTURA */
+
+
+
+
+
+
+  

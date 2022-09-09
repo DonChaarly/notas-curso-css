@@ -1,0 +1,123 @@
+* {
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+div {
+    width: 120px;
+    height: 120px;
+}
+
+
+/*..............Absolute
+    Con esta posicon el objeto ya no conserva su espacio en el DOM
+    Osea que los demas elementos pueden ocupar su espacio
+    Aunque los elemento sean bloques, el ancho se ajustara al contenido
+    Adquire 4 propiedades para poder posicionarse:
+        top.... top tiene prioridad sobre bottom
+        left.... left tiene prioridad sobre right
+        right
+        bottom
+    El punto de referencia para mover el objeto sera el viewPort(es todo el espacio visible de la pantalla) 
+    siempre y cuando el contenedor no este posicionado
+        Sin embargo si no se especifica el top o left, etc se tomara la posicion del contenedor en el que este
+
+*/
+
+/*
+    Este contenedor no esta posicionado
+*/
+.contenedor-sin-posicion{
+    background-color: rgb(120, 164, 164);
+    margin: 300px;
+    width: 300px;
+    height: 300px;
+}
+/*
+    No se especifico un valor para el top o left por ello este objeto esta posicionado donde el padre
+*/
+.caja-1{
+    background-color: rgb(139, 217, 38);
+    position: absolute;
+    z-index: 30;
+}
+/*
+    La posicion en top 0 realmente corresponde al borde superior del viewPort
+*/
+.caja-2{
+    background-color: rgb(36, 118, 181);
+    position: absolute;
+    top: 0;
+
+}
+/*
+    Se especifico el left pero no el top por ello se mueve en el left pero no en el top
+*/
+.caja-3{
+    background-color: rgb(249, 28, 238);   
+    position: absolute;
+    left: 10px;
+}
+/*
+    Si se especifica el right o el bottom se tomara como referencia el borde derecho y el borde inferior del viewPort
+*/
+.caja-4{
+    background-color: rgb(38, 238, 68);
+    position: absolute;
+    bottom: 50px;
+    right: 10px;
+}
+
+
+/*
+    Si el contenedor se posiciona entonces los elementos hijos 
+    tomaran como referencia los bordes de este contenedor, ya no el del viewPort
+
+*/
+.contenedor-con-posicion{
+    background-color: rgb(120, 164, 164);
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 30px;
+    left: 900px;
+}
+/*
+    Se puede facilmente posicionar los elementos hijos en cada esquina
+*/
+.caja-1-posicionada{
+    background-color: rgb(139, 217, 38);
+    position: absolute;
+}
+.caja-2-posicionada{
+    background-color: rgb(36, 118, 181);
+    position: absolute;
+    right: 0;
+}
+.caja-3-posicionada{
+    background-color: rgb(249, 28, 238);   
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.caja-4-posicionada{
+    background-color: rgb(38, 238, 68);
+    position: absolute;
+    bottom: 0;
+}
+/*
+    Se puede centrar una caja de la siguiente manera
+*/
+.caja-5-posicionada{
+    background-color: rgb(7, 13, 8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+
+

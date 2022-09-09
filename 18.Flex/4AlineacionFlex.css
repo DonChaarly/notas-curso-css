@@ -1,0 +1,53 @@
+/*--------------------------    ALINEACION DE ELEMENTOS EN UN FLEX    -----------------------------------*/
+
+/*
+    Tenemos diferentes formas de alinear el contenido dentro del contenedor flex
+        Justify-content: Nos ayuda a alinear los elementos de las filas
+        Align-items: Nos ayuda a alinear los elementos en el cross-axis cuando se tiene solo una linea
+        Align-content: Nos ayuda a alinear los elementos en el cross-axis cuando mas de una linea
+*/
+
+/*
+    Los valores de justify-content pueden ser:
+        center: Los elemento se centran juntos al centro del contenedor
+        space-around: Le da un margin igual a ambos lados a cada caja
+        space-between: Pega los elementos de los extremos a los costados y deja el mismo margen entre los objetos del centro
+        space-evenly: Se tiene el mismo margen entre caja y caja y a los costados
+*/
+.flex-container-justify{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+/*
+    El align-items se utiliza cuando se tiene una sola linea, en caso de que la pantalla se haga mas chica provoque que se haga otra linea
+    los elementos se van a comportar de manera extraña, por eso se tiene align-content
+    Los valores de align-items y align-content pueden ser:
+        center: Los elemento se centran a lo largo del cross-axis
+        flex-end: Coloca el elemento al final del cross-axis
+        flex-start: Coloca los elementos al inicio del cross-axis
+        baseline: Este es util cuando se quiere tener los elementos en la parte de abajo y que caundo la pantalla se achique se 
+                  vayan subiendo a la fila de arriba, esto no se puede lograr con un flex-end y un wrap-reverse, por eso se utiliza baseline
+*/
+.flex-container-align{
+    display: flex;
+    align-content: baseline;
+    height: 79vh;
+    flex-wrap: wrap-reverse;
+    
+}
+
+.flex-item{
+    background-color: #3ba;
+    width: 150px;
+    height: 150px;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.green{
+    background-color: green;
+}

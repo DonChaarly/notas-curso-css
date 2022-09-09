@@ -1,0 +1,39 @@
+* {
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+    font-size: 40px;
+}
+
+
+/*..............Fixed
+    La principal caracteristica de este objeto es que al hacer scroll, el elemento se mantiene 
+    en la posicion en donde se coloco
+    Es Muy parecido al position Absoluto pero este puede mantenerse quieto en la pantalla
+
+    Con esta posicon el objeto ya no conserva su espacio en el DOM Osea que los demas elementos pueden ocupar su espacio
+    Aunque los elemento sean bloques, el ancho se ajustara al contenido
+    Adquire 4 propiedades para poder posicionarse:
+        top.... top tiene prioridad sobre bottom
+        left.... left tiene prioridad sobre right
+        right
+        bottom
+    El punto de referencia para mover el objeto sera el viewPort(es todo el espacio visible de la pantalla) 
+    siempre y cuando el contenedor no este posicionado
+        Sin embargo si no se especifica el top o left, etc se tomara la posicion del contenedor en el que este
+
+*/
+
+
+.caja-fixed{
+    background-color: red;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 90vw;
+    margin: 20px auto;
+    border-radius: 40px;
+    padding: 30px;
+}
+.texto{
+    padding-top: 180px;
+}

@@ -1,0 +1,39 @@
+/*------------------------  TRANSITION    -----------------------------------*/
+
+/*
+    Con transition podemos realizar transiciones dentro de los elementos
+    Con las cuales mostramos todos los frame por los que pasa un elemento al modificarse en un tiempo determinado
+
+    Se tiene las siguientes propiedades:
+        transition-property: (property/ies, all, none); Propiedad/es a las que le vamos a aplicar la transicion (obligatioria)
+        transition-duration: Tiempo en el que se va a aplicar la transicion (obligatoria)
+        transition-delay: Tiempo de retraso que va a pasar antes de que se aplique la transicion
+        transition-timing-function: (linear, ease, ease-in, ease-out, ease-in-out, step-start, steps(int, start/end), initial, inherit)
+                                    Es la curva de velocidad que se va a seguir en la transicion
+        transitio: Es el shorthand de las propiedades anteriores
+*/
+
+.container{
+    height: 300px;
+    background-color: #19f;
+    padding: 30px;
+}
+
+.caja{
+    background-color: rgb(31, 82, 110);
+    height: 100px;
+    width: 100px;
+
+    
+    transition-property: background-color, width, height;
+    transition-duration: 1s, 2s, 3s;
+    transition-delay: 0s, 0s, 2s;
+
+    
+}
+
+.caja:hover{
+    background-color: rgb(154, 220, 22);
+    height: 250px;
+    width: 250px;
+}

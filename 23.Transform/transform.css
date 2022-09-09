@@ -1,0 +1,106 @@
+/*------------------------- TRANSFORM ---------------------------------*/
+
+/*
+    Las transform nos permiten transformar el elemento de distintas maneras por medio de distintas funcion
+    Transform NO CONSUME TANTOS RECURSOS COMO POR EJEMPLO left: 
+
+    Algunos valores que se pueden tener son:
+    transform: translateX(x), translateY(y), translate(x, y); Para mover el elemento de una posicion a otra, Se recomienda utilizar porcentajes
+    transform: scale(x,  x,y ), scaleX(x), scaleY(y); Para escalar el elemento
+    transform: rotate(num(deg, grad, rad, turn)), rotateX(angleUnit), rotateZ(angleUnit), rotate3D(angleUNit); Para rotar el elemento
+    transform: skew(angleUnit); Hace que el elemento se deforme en diagonal dependiendo de los grados que se le especifiquen
+    clip-path: polygon(): Dado unas coordenadas modifica el elemento para tomar la forma de algun poligono
+
+    mas propiedades en https://www.w3schools.com/cssref/css3_pr_transform.asp
+*/
+
+.container{
+    padding: 10px 5px;
+    background-color: #a2f3a9;
+    margin: 5px;
+}
+
+/*.........TRANSLATE()
+    Unidades:
+        Con pixeles o otro: Se transalda la cantidad de unidades establecidas
+        Con porcentaje %: Se transalda el porcentaje del tamano del objeto, por ej. si el objeto mide 80px y damos un valor 50%, el objeto se movera 40px
+    translateX()
+*/
+b {
+    margin: auto;
+}
+
+.caja{
+    background-color: #9c5;
+    height: 80px;
+    width: 80px;
+    margin: 20px;
+    display: flex;
+    color: #FFF;
+}
+
+/*.........TRANSLATE()
+    Unidades:
+        Con pixeles o otro: Se transalda la cantidad de unidades establecidas
+        Con porcentaje %: Se transalda el porcentaje del tamano del objeto, por ej. si el objeto mide 80px y damos un valor 50%, el objeto se movera 40px
+    translateX(): Se translada en el eje x
+    translateY(): Se translada en el eje y
+    translate(x, y): Es el shorthand de las dos anterirores
+    
+    Se pueden tener valores negativos
+*/
+.container:nth-child(1) .caja{
+    transform: translateX(500px) translateY(150%);
+    transform: translate(500px, 150%);
+}
+
+/*.........SCALE()
+    scaleX(): Escala el elemento en el eje x
+    scaleY(): Escala el elemento en el eje y
+    scale(): Se puede colocar solo un parametro y escalara el elemento en ambos ejes, tambien se puede colocar el valor para x , y
+    scaleZ(): Escala el elemento en el eje z
+    scale3D(x, y, z): Es el shorthand de las tres propiedades
+
+*/
+.container:nth-child(2) .caja{
+    transform: scaleX(2) scaleY(1.5);
+    transform: scale(2, 1.5);
+    /*transform: translate(500px, 150%);*/
+}
+
+/*.........ROTATE()
+    rotateX(): Rota el elemento en el eje x
+    rotateY(): Rota el elemento en el eje y
+    rotate(): Rota el elemento en el plano 2D
+    rotateZ(): Rota el elemento en el eje z
+    rotate3D(x, y, z): Es el shorthand de las tres propiedades
+
+*/
+.container:nth-child(3) .caja{
+    transform: rotate(45deg)
+}
+
+/*.........SKEW()
+    skewX(): Deforma el elemento en el eje x
+    skewY(): Deforma el elemento en el eje y
+    skew(): Es el shorthand de las dos propiedades anteriores, se puede colocar solo un valor para el skew x
+*/
+.container:nth-child(4) .caja{
+    transform: skewX(30deg) skewY(20deg);
+    transform: skew(30deg);
+    transform: skew(30deg, 20deg);
+}
+/*Para regresar el contenido a la normalidad neutralizamos las tranformaciones*/
+.container:nth-child(4) .caja b{
+    transform: skew(-30deg, -20deg);
+}
+
+/*.............clip-path: polygon()
+    Se puede buscar un generador de clip-path en google para hacer las formas que queramos
+
+*/
+.container:nth-child(5) .caja{
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+

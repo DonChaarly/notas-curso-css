@@ -1,0 +1,93 @@
+* {
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+div {
+    width: 120px;
+    height: 120px;
+    display: block;
+}
+
+/*----------------------------   POSITION   ----------------------------*/
+/*
+    Posicionar un objeto significa que este va a afectar el flujo html, osea el orden con el que vemos los objetos
+    Para cambiar el position de un objeto se utiliza la propiedad display y este puede tener las siguientes posiciones
+*/
+
+
+
+/*..............Relative
+    Con esta posicon el objeto conserva su espacio en el DOM
+    Adquire 4 propiedades para poder posicionarse:
+        top.... top tiene prioridad sobre bottom
+        left.... left tiene prioridad sobre right
+        right
+        bottom
+    El punto de referencia para mover el objeto sera a partir del espacio reservado para esta caja en el DOM
+*/
+
+.caja-1{
+    background-color: rgb(139, 217, 38);
+    position: relative;
+    top: 10px;
+    left: 50px;
+    right: 500px;
+    bottom: 500px;
+    z-index: 0;   
+}
+
+/*
+    Tambien se adquiere la propiedad z-index
+        Esta propiedad posiciona los elementos uno encima del otro en los elementos ya posicionados
+        El flujo natura seria que los ultimos elementos colocados estaran encima de los primeros
+        si a alguno se le modifica el z-index este flujo cambia
+        por ejemplo un objeto que tenga un z-index de 20 estara por encima de uno de 10
+        Se recomienda colocar valores grandes por si despues se quiere colocar un elemento dentro del este rango de z-indexes
+*/
+.caja-2{
+    background-color: rgb(36, 118, 181);
+    position: relative;
+    top: 20px;
+    left: 300px;
+    z-index: 30;   
+}
+
+.caja-3{
+    background-color: rgb(249, 28, 238);   
+    position: relative;
+    right: -360px;
+    bottom: 50px;
+    z-index: 10;
+}
+
+/*
+    Cuando se tiene un objeto hijo no posicionado dentro de un objeto padre posiconado
+    Este objeto hijo se movera junto con el padre
+    Y aunque el padre tenga la propiedad de z-index nunca se sobrepondra al hijo independientemente de que este posicionado o no
+*/
+.caja-4{
+    background-color: rgb(38, 238, 68);
+    position: relative;   
+    width: 250px;
+    height: 250px;
+    left: 600px;
+}
+
+.caja-4__hijo-no-posicionado{
+    background-color: rgb(170, 199, 119);
+}
+
+/*
+    Solo hay una manera de que un objeto hijo se coloque por debajo de un padre
+    y es colocando un -1 al objeto hijo y al padre no se le defina el z-index
+*/
+.caja-4__hijo-posicionado{
+    background-color: rgb(130, 43, 197);
+    position: relative;
+    top: 60px;
+    left: 190px;
+    z-index: -1;
+}
+

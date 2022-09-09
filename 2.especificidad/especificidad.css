@@ -1,0 +1,13 @@
+/*-------------------------------ESPECIFICIDAD----------------------------------*/
+
+/*
+    La especificidad se refiere a la jerarquia que tienen la aplicacion de estilos
+    dentro de los elementos html
+    JERARQUIEA DE MAYOR A MENOR:
+    "!important: Si se coloca important en un atributo este se aplicara sin importar que (no se recomienda mucho hacer esto)
+    Estilos en linea: Aplicar un estilo directamente al elemento html
+    Identificadores
+    clases, pseudo-clases, atributos: Comparten la misma jerarquia
+    elementos, pseudo-elementos: 
+    
+*/

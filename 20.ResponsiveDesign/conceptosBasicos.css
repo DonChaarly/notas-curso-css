@@ -1,0 +1,47 @@
+body{
+    background: radial-gradient(circle, #fff, #bbb) ;
+    padding: 15px;
+}
+/*--------------------------------- RESPONSIVE DESIGN -------------------------*/
+
+/*
+    El objetivo del responsive design es adaptar un diseño a varias resoluciones, osea a diferentes tamaños de pantalla
+    Existen diversar metodologias para lograr este objetivo
+        MobileFirst: Con esta metodologia se parte de un diseno basado para celulares y de ahi ir escalando hast aun desktop o de pc
+        DesktopFirst: Con esta metodologia se parte de un dieno basado para Desktop o PC y de ahi ir ajustandolo hasta tamanos de mobile
+        ContentFirst: Esta metodologia se basa en preocuparse por el contenido primero y de ahi elegir si mobilefirst o desktop first
+                      Esto tiene mas que ver con el marketing, buscar que tipo de forma vende mas
+
+    Para trabajar con responsive design se utilizan Estructuras flexibles(contenedores flexibles, imagenes y videos flexibles
+    Se trabaja con Media Queries, las cuales nos ayuda a consultar y validar ciertas condiciones que pueden cumplirse
+    par de esta forma cambiar la apariencia de la pantalla y adaptarse a ella
+
+    Para que el responsive design funcione en dispositivos es necesario colocar el meta de viewPort
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+*/
+
+.div-responsive{
+    background-color: #ab2;
+}
+
+
+/*
+    Se coloca la sintaxis siguiente
+    @media (all/print/screen/speech) condicional(and, or) (condicion) {
+
+    }
+
+    En el ejemplo estamos diciendo
+    Cuando sea una pantalla y se tenga minimo 400px y maximo 800px se aplicaran los estilos
+    fuera del rango de 400-800px no se pueden aplicar los estilos
+*/
+@media screen and (min-width:600px) and (max-width: 800px){
+    
+    .div-responsive{
+        background-color: red;
+    }
+
+}
+

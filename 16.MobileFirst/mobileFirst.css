@@ -1,0 +1,46 @@
+/*--------------------------------- RESPONSIVE DESIGN - MOBILE FIRST-------------------------*/
+
+/*
+    El objetivo del responsive design es adaptar un diseño a varias resoluciones, osea a diferentes tamaños de pantalla
+    Existen diversar metodologias para lograr este objetivo
+
+    Mobile First tiene como metodo partir de un diseño adaptado para moviles y de ahi adaptarlo a resoluciones mas grandes
+
+    Para que el responsive design funcione en dispositivos es necesario colocar el meta de viewPort
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    Para Cambiar entre diseños se puede utilizar los mediaQuerys que son como sentencias if en las que colocamos
+    condiciones y si se cumplen se utilizan esos estilo, esto se ve mas adelante
+
+*/
+
+div{
+    width: 45%;
+    display: inline-block;
+    padding: 20px;
+    background: #ddd;
+}
+
+h1{
+    font-size: 30px;
+}
+
+.caja2{
+    background: #bbb;
+}
+
+
+/*
+    Cuando el mediaQuery se cumpla se utilizaran los estilos establecidos dentro
+*/
+@media only screen and (max-width: 800px) {
+    
+    div{
+        display: block;
+        width: 100%;
+    }
+    h1{
+        font-size: 20px;
+    }
+
+}

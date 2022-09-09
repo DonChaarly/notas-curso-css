@@ -1,0 +1,82 @@
+/*-----------------------   PSEUDO ELEMENTOS--------------------------*/
+
+
+/*
+    Los pseudo elementos es un elemento que no forma parte de DOM pero si podemos ver cambios visuales
+    Los pseudo elementos son los siguientes:
+        ::first-line (funciona solo BLOCK`s) 
+                Este pseudo-elemento se refiere al primer hijo directo del contenedor
+                los estilos marcados con este pseudo-elemento solo se aplicaran al primero hijo del contenedor
+        ::first-letter (funciona solo con BLOCK`s)
+                los estilos marcados con este pseudo-elemento solo se aplicaran a la primera letra
+        ::placeholder
+                Los estilos se aplicaran solo al placeholder del input
+        ::selection
+                Se aplica los estilos a lo que el usuario seleccione con el mause para por ejemplo copiar texto
+        ::after (se vuelven hijos inline del elementos al que se le esta aplicando, se necesita colocar la propiedad content)
+                Con este se puede colocar contenido despues del elemento al que se le aplique
+        ::before (se vuelven hijos inline del elementos al que se le esta aplicando, se necesita colocar la propiedad content)
+                Con este se puede colocar contenido antes del elemento al que se le aplique
+*/
+
+
+/*
+    Los pseudo-elementos se aplican a un elemento ya establecido ya sea h1 o una clase, etc
+    Con first-line los estilos se aplicaran a la primera linea a pesar que la pantalla se achique y la linea se acorte, siempre seara la primera linea
+*/
+.texto::first-line{  
+    color: blue;
+
+}
+
+/*
+    Con first-letter aplica los etilos a la primera letra
+*/
+.texto::first-letter{
+    font-size: 50px;
+}
+
+/*
+    Con placeholder se aplican los etilos al placeholder del input
+*/
+input::placeholder{
+    color: blueviolet;
+    background-color: aquamarine;
+}
+
+/*
+    Con selection se aplican los estilos a lo que el usuario seleccione con el mause
+*/
+div::selection{
+    background-color: black;
+    color: white;
+}
+
+/*
+    Con before se agrega contenido despues del elemento al que se le aplique esta pseudo-clase
+    Los elementos agregados no forman parte del DOM
+    Los elemntos seran de tipo inline
+    Se debe agergar la propiedad content a fuerzas
+*/
+.after-before::before{
+    content: "Texto antes ";
+    background-color: aqua;
+}
+/*
+    Con after se agrega contenido antes del elemento al que se le aplique esta pseudo-clase
+*/
+.after-before::after{
+    content: " Texto despues";
+    background-color: aqua;
+}
+
+
+
+
+
+
+
+
+.content{
+    padding: 20px;
+}

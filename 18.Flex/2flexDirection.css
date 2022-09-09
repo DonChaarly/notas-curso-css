@@ -1,0 +1,34 @@
+/*--------------------------    FLEX-DIRECTION    -----------------------------------*/
+
+/*
+    En el contenedor tendremos dos ejes: El main-axis y el cross-axis
+    El main-axis: Inicialmente es el eje x iniciando de la izquierda a la derecha
+    El cross-axis: Inicialmente es el eje y iniciando de arriba hacia abajo
+    Con el atributo flex-direction: podemos cambiar el sentido de los ejes, esto debe hacerse en el contenedor
+    Podemos juntar flex-direction y flex-wrap con la propiedad flex-flow: (valorflex-direcition) (valorflex-wrap)
+*/
+
+/*
+    Los valores de flex-direction pueden ser:
+        row: Es el valor por defecto, los ejes quedan igual, los elementos se colocan uno al lado del otro de izquierda a derecha
+        colum: El main-axis sera ahora el cross-axis y vicebersa, con esto los elementos se colocaran uno abajo de otro de arriba a abajo
+        row-reverse: Los elementos iran de derecha a izquierda
+        colum-reverse: Los elementos iran de abajo hacia arriba
+
+*/
+
+.flex-container{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.flex-item{
+    margin: 20px;
+    background-color: #3ba;
+    width: 150px;
+    height: 150px;
+}
+
+.orange{
+    background-color: orange;
+}

@@ -1,0 +1,25 @@
+/*------------------    CURSOR  ------------------------*/
+
+/*
+    Con la propiedad cursor podemos modificar la apariencia del cursor
+    hay diferentes estilos de cursor algunos de ellos son:
+        pointer
+        row-resize
+        progress
+        etc
+    
+
+*/
+
+.caja {
+    margin: 25px;
+    width: 300px;
+    height: 250px;
+    border: 15px solid red;
+    background-color: pink;
+    cursor: pointer;
+}
+
+.caja:active{
+    cursor: row-resize;
+}

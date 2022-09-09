@@ -1,0 +1,54 @@
+* {
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+    font-size: 40px;
+}
+
+
+/*..............Sticky
+    Esta posicion es como Fixed pero ahora si se conserva su espacio en el DOM
+
+    Al hacer scroll, el elemento se mantiene en la posicion en donde se especifico
+    Se tiene que especificar el top y left para que se mantenga fijo
+    ya que con esto especificamos en que parte de la pantalla se mantendra fijo
+
+    Aunque los elemento sean bloques, el ancho se ajustara al contenido
+    Adquire 4 propiedades para poder posicionarse:
+        top.... top tiene prioridad sobre bottom
+        left.... left tiene prioridad sobre right
+        right
+        bottom
+    El punto de referencia para mover el objeto sera el viewPort(es todo el espacio visible de la pantalla) 
+    siempre y cuando el contenedor no este posicionado
+        Sin embargo si no se especifica el top o left, etc se tomara la posicion del contenedor en el que este
+
+*/
+
+
+.caja-fixed-bottom{
+    background-color: red;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 90vw;
+}
+
+.caja-fixed-top{
+    background-color: red;
+    position: sticky;
+    top: 20px;
+    left: 0;
+    right: 0;
+    width: 90vw;
+    margin: 20px auto;
+    border-radius: 40px;
+    padding: 30px;
+    z-index: 10;
+}
+
+.texto{
+    margin: 10px;
+    text-align: justify;
+}

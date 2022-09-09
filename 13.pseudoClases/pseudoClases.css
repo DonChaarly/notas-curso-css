@@ -1,0 +1,76 @@
+/*--------------------------    PSEUDO CLASES  ------------------------------*/
+
+/*
+    Con las pseudo-clases lo que se hace es escuchar un evento, cuando este evento se realice, se aplican los cambios
+    Las pseudo-clases son parecidas a los pseudo elementos en el sentido de que la sitaxis es igual
+    se tiene que implementar en un elemento ya establecido
+    Tipos de pseudo-clases:
+        :hover : Se aplica cuando se pasa el mause por encima del elemento
+        :link : Se aplica cuando el link aun no ha sido visitado
+        :visited : Se aplica cuando el link ya fue visitado
+        :avitve : Se aplica cuando se da click sobre un elemento
+        :focus : Se aplica cuando algun elemento tiene el foco
+        :lang() : Se aplica cuando el contenido tiene algo del idioma que se especifica
+        :first-child: Se aplica al primer hijo directo del contenedor
+        :nth-child(): Es como first-child pero aqui se puede especificar numero de elemento queremos seleccionar
+        :valid: Se aplican los etilos cuando el campo es valido en un input
+
+*/
+
+.content{
+    margin: 40px;
+}
+
+.elemento1{
+    width: 70px;
+    height: 70px;
+    background-color: rgb(15, 99, 171);
+    transition: width 0.3s, height .3s;
+}
+
+/*
+    Con hover se realiza el cambio cuando se coloca el mouse encima del elemento
+*/
+.elemento1:hover{
+    background-color: rgb(177, 119, 4);
+    width: 100px;
+    height: 100px;
+
+}
+
+/*
+    Con link Se aplica cuando el link aun no ha sido visitado
+*/
+.elemento2:link{
+    color: aquamarine;
+}
+
+/*
+    Con visited Se aplica cuando el link ya fue visitado
+*/
+.elemento3:visited{
+    color: brown;
+}
+
+/*
+    Con active Se aplica cuando se da click sobre un elemento
+*/
+.elemento1:active{
+    background-color: green;
+}
+
+/*
+    Con focus Se aplica cuando algun elemento tiene el foco
+*/
+.elemento4:focus{
+    background-color: blanchedalmond;
+    width: 300px;
+    height: 40px;
+}
+
+/*
+    Con lang() Se aplica cuando el contenido tiene algo del idioma que se especifica
+*/
+b:lang(en){
+    background-color: blue;
+}

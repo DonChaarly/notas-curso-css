@@ -1,0 +1,40 @@
+/*--------------------------    FLEX-WRAP    -----------------------------------*/
+
+/*
+    Con la propiedad flex-wrap podemos modificar como se comportaran los elementos flex al disminuir la pantalla
+
+    Podemos juntar flex-direction y flex-wrap con la propiedad flex-flow: (valorflex-direcition) (valorflex-wrap)
+*/
+
+/*
+    Los valores de flex-wrap pueden ser:
+        no-wrap: Es la que se tiene por defecto
+        wrap: Con esto los objetos en vez de hacerse mas angostos, van a irse a la siguiente fila (una fila abajo)
+        wrap-reverse: Con esto los objetos en vez de hacerse mas angostos, van a irse a la anterior fila (una fila arriba)
+
+*/
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*
+    Se puede colocar un min-width y un width: % para especifica hasta que punto se puede acortar el elemento
+    el elemntos puede hacerse mas angosto o mas grande
+*/
+.flex-item{
+    margin: 20px;
+    background-color: #3ba;
+    max-width: 150px;
+    width: 150px;
+    height: 150px;
+    width: 20%;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.green{
+    background-color: green;
+}

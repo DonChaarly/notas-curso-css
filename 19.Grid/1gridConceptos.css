@@ -1,0 +1,24 @@
+/*-----------------------   GRID    ---------------------------------*/
+
+/*
+    GRID es un valor de la propiedad display y es una forma de trabajar con los elementos en el layout
+    Con grid se trabaja a traves de grillas que son como tablas la cual tiene celdas, columnas, fias, areas, tracks, etc.
+    Es parecido al flex en el sentido en que se tiene un grid-container y grid-items, y la propiedad display se aplica al contenedor
+    El grid-container se comportara como un bloque
+    Conceptos del grid:
+        Grid-container: El grid container es todo el contenedor grid en el cual se alojan las columnas, filas, celdas, etc.
+                        Se a la cantidad de columnas y filas que va a tener el contenedor
+        grid-item: Son todos aquellos hijos directos contenidos en el grid-container
+                   Puede haber mas grid-items que celdas o menos grid-items que celdas
+        grid-cell: Son las areas formadas por las columnas y filas
+                   Si se tienen 3 columnas y 2 filas se tendran entonces 6 celdas
+        grid-tracks: Son todas aquellas filas o columnas del grid-container 
+                    Si se tiene 3 columnas y 2 filas se tendran 5 grid-tracks
+        grid-areas: Son areas que nosotros definimos, estas tiene que ser consecutivas, osea siempre deben formar un 
+                    rectangulo o cuadrado, no se puede formar un a L o otra cosa
+                    Se puede seleccionar un area que abarque las dos primeras filas y las 2 primeras columnas
+        grid-line: Son todas las filas creadas a partir de la tabla.
+                    Siendo la primera linea horizontal el borde superior de la tabla
+                    y la primera linea vertical el borde izquierod de la tabla
+
+*/

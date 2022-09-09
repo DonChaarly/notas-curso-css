@@ -1,0 +1,71 @@
+
+/*---------------   FILTER------------------------------------*/
+
+
+/*
+    La propiedad filter se utliza principalmente para modificar el aspecto de los elementos, el brillo, contraste, etc
+    filter es como transform, se puede colocar varios valores juntos
+    Algunos de los valore son:
+        none: Es la propiedad por defecto
+        blur(px): Para desenfocar el elemento
+        brightness(0-1): Para cambiar el brillo
+        contrast(1=contrasteNormal): Para cambiar el contraste
+        drop-shadow(x y borde color): Es colo un box-shadow, pero con este podemos aplicar la sombra a los bordes de una imagen o figura
+                                      Con box-shadow se aplica la sombra al rectangulo donde esta contenida la figura
+        grayscale(0-1 o 0%-100%): Para aplicar una escala de grises a la imagen
+        hue-rotate(deg): Para rotar la gama de colores
+        invert(%): Para invertir los colores 
+        opacity(): Para establecer la opacidad del objeto 0=transparente 1=opaco
+        saturate(%): Para saturar los colores
+        sepia(): Para hacer sepia los colores
+
+*/
+img{
+    width: 300px;
+    margin: 40px;
+    
+    filter: 
+        blur(1.5px) 
+        brightness(.6) 
+        drop-shadow(2px 2px 2px #000) drop-shadow(2px 2px 2px #000)
+        grayscale(.3)
+        hue-rotate(180deg)
+        invert()
+        opacity(.9)
+        saturate(500%);
+}
+
+
+/*
+    SE PUEDEN CREAR EFECTOS COMO EL SIGUIENTE, VER EL RESULTADO EN LA PAGINA
+*/
+.container{
+    padding: 20px;
+    filter: contrast(30);
+    background-color: #fff;
+    
+}
+
+.container div{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background: red;
+    border-radius: 50%;
+    margin: 40px;
+
+    filter: blur(10px); 
+}
+
+.caja1{
+    animation: transladar 3s alternate infinite;
+}
+
+@keyframes transladar{
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(160px);
+    }
+}

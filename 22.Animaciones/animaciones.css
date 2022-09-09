@@ -1,0 +1,78 @@
+/*------------------------- ANIMACIONES ---------------------------------*/
+
+/*
+    Las animacines son parecidas a las transiciones solo que estas necesian de un @keyFrames el cual es como un identificador con el cual definiremos nuestra animacion
+
+
+    Se tiene las siguientes propiedades:
+        animation-name: Nombre con el cual esta definida la animacion
+        animation-duration: Tiempo en el que se va a aplicar la animacion 
+        animation-delay: Tiempo de retraso que va a pasar antes de que se aplique la animacion
+        animation-timing-function:  cubic-bezier(x1, y1, x2, y2); Con cubir bezier se perzonaliza la curva de velocidad que se quiere tener
+                                    (linear, ease, ease-in, ease-out, ease-in-out, step-start, steps(int, start/end), initial, inherit); Estas son curvas de velocidad predefinidas
+                                    Es la curva de velocidad que se va a seguir en la animacion
+                                    En google se tiene la herramienta para generar curvas-bazier (ir a curso de css de dalto min. 8:40:00)
+        animation-iterator-count: Numero de veces que se va a realizar la animacion
+        animatin-fill-mode: (none, forwards, backwards, both, initial, inherit);
+                            Posicion en la que se va a quedar despues de terminar la animacion
+        animation-direction: (normal, reverse, alternate, alternate-reverse);
+                            direccion en la que se va a empezar la transicion
+*/
+
+
+.container{
+    padding: 20px 5px;
+    background-color: #a2f3a9;
+}
+
+.caja{
+    background-color: #9c5;
+    height: 80px;
+    width: 80px;
+    margin: 20px;
+    position: relative;
+
+
+    animation-name: desplazarse;
+    animation-duration: 2s;
+    animation-timing-function:  cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/*
+    Para crear una animacion se coloca el comando @KeyFrames y el nombre que le vamos a poner
+    Se tienen dos formas de establecer el comportamiento de la animacion 
+        Con from y to:
+            from{
+                Propiedades con las que va a empezar la animacion
+            }
+            to{
+                Propiedades con las que terminara la animacion
+            }
+        Con Porcentajes (se puede colocar tantos porcentajes como queramos):
+            0%{
+                Propiedades que se tendran al 0% de la animacion
+            }
+            50%{
+                Propiedades que se tendran al 50% de la animacion
+            }
+            100%{
+                Propiedades que se tendran al 100% de la animacion
+            }
+
+*/
+@keyframes desplazarse {
+    0%{
+        left: 0; 
+        background-color: #028;
+    }
+    50%{
+        background-color: red;
+    }
+    100%{
+        left: 80%; /*Es mejor trabajar esto con transform: translate()*/
+        background-color: green;
+    }
+
+}

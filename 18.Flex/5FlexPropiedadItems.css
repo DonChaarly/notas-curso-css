@@ -1,0 +1,87 @@
+/*--------------------------    ALINEACION DE ELEMENTOS EN UN FLEX    -----------------------------------*/
+
+/*
+    Se pueden agregar propiedades flex tambien a los items para modificar su comportamiento
+    Algunas de estas propiedades son:
+        align-self: Esta propiedad se utiliza para alinear el item a lo largo del axis
+        margin: El margin funcionara de distinta manera en los items flex
+        flex-grow: Se le asigna a cada caja que porcion del espacio sobrante ocuparan (el flex-grow de todas se promedia y eso es lo que le toca a cada caja)
+        flex-shrink: Se asigna a cada caja la porcion width que cederan cuando se tenga que hacer mas angostas
+        flex-basis: Es como el width pero esta es espacial para los flex y toma mas importancia (es mejor utilizar este que width)
+        flex: (flex-grow) (flex_shink) (flex-basis); Es el shortcut de las demas propiedades para no tener que escribir todas esas
+        order: Se puede especificar el orden que tendran las cajas dentro del contenedor
+
+*/
+
+.flex-container{
+    display: flex;
+    height: 100vh; 
+    width: 100vw;
+    position: absolute;
+    justify-content: space-evenly; 
+    flex-wrap: wrap;
+}
+.flex-item{
+    text-align: center;
+    margin: 5px;
+    background-color: #3ba;
+    min-width: 200px;
+    height: 150px;
+}
+
+/*
+    Con align-self: Se alineara el elemento con respecto al cross-axis, se tienen los valores
+        center: Los elemento se centran a lo largo del cross-axis
+        flex-end: Coloca el elemento al final del cross-axis
+        flex-start: Coloca los elementos al inicio del cross-axis
+        baseline: Este es util cuando se quiere tener los elementos en la parte de abajo y que caundo la pantalla se achique se 
+                  vayan subiendo a la fila de arriba, esto no se puede lograr con un flex-end y un wrap-reverse, por eso se utiliza baseline
+    Margin funcionara al reves:
+        margin-top: Lo que se le de se aplicara a la parte de abajo
+        margin-left: Lo que se le de se aplicara a la parte derecha
+        margin-right: auto; Si se le pone auto, el elemento se ira todo hacia la izquierda
+        margin: auto; Con esto se centraria el elemento
+
+*/
+.orange{
+    background-color: orange;
+    align-self: flex-end;
+    margin-left: 80%;
+    margin-top: auto;
+}
+
+/*
+    Con flex-grow se especifica el espacio que ocupara el elemento dentro del contenedor
+        Los valores flex-grow de todos los elementos se suman y se promedian para saber que espacio le tocara a cada caja
+        Si un elemento se pasa a la parte de abajo este tomara el tamano completo del contenedor hasta que bajo otro elemento
+        Es necesario colocar la propiedd flex-wrap en el contenedor para que pase esto
+    El flex-basis: es como el width pero propia de flex y toma mas importancia que el width
+    El felx-shirnk: Cuando no se tiene el wrap, las cajas se hacen mas angostas, sin embargo las tres cajas se achican la misma cantidad cada una
+                    Para modificar esto se tiene flex-shrink, por defecto se tiene 1 en todas, si una tiene 2 esta cedera el doble de tamano que las demas
+                    Con 0, la caja no cedera nada de espacio
+    Con order: Se especifica la posicion que tendra la caja en el main-axis (es como un z-indez, si un elemento tiene mas order que otro, se ira hacia el final del main-axis)
+                Aqui el pink tiene un order de 1 y los demas no tiene por ende tienen 0, por lo que la caja pink se ira al final del main-axis
+*/
+.pink{
+    background-color: rgb(207, 29, 198);
+    flex-grow: 1;
+    flex-shrink: 2;
+    order: 1;
+}
+
+.blue{
+    background-color: rgb(60, 54, 225);
+    flex-grow: 1;
+}
+
+/*
+    flex es un shorcut para no tener que escribir las propiedades flex-grow, flex-shink, flex-basis
+        Es como si huiberamos escrito
+        flex-grow: 3;
+        flex-shink: 1;
+        flex-bases: 200px;
+*/
+.green{
+    background-color: green;
+    flex: 3 1 200px;
+}

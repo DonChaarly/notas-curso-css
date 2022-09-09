@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/*--------------------  UNIDADES DE MEDIDA ----------------------------------*/
+
+
+/*................MEDIDAS ABSOLUTAS
+   px: Son las unidades mas utilizadas, representan un pixel de la pantall
+   medidas reales como: cm, mm, in
+   pt: puntos
+*/
+.contact-form{
+    font-size: 20px;
+}
+
+
+/*...............MEDIDAS RELATIVAS*/
+
+/*
+   rem: tiene como referencia el root
+
+   em: por defalut esta medida vale 16px.   1 em = 16px
+   Pero esto se puede modificar, si a un atributo se le coloco una medida absoluta antes, esta medida se hereda
+   por ejemplo font-size tiene 20px, osea que en el elemento hijo tendra: 1em = 20px
+*/
+.contact-form__h2 {
+    font-size: 2em;
+    
+}
+
+/*
+   vh, vw: Estas medidas son como porcentajes aplicado al tamano de la pantalla
+   100vh equivale a todo el largo de la pantalla
+   100vw equivale a todo el ancho de la pantalla
+*/
+.caja{
+    background-color: aqua;
+    height: 50vh;
+    width: 100vw;
+}
+
+/*
+    porcentaje: Se refiere al porcentaje de espacio pero aplicado al contenedor que los contiene
+    100% en un contenedor que tenga un height de 50px equivaldra a 50px
+*/
+.caja__contenida{
+    background-color: blue;
+    height: 50%;
+    width: 80%;
+}
